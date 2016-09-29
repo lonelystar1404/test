@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div id="map"></div>
+
+  <div id="map-canvas">
+    <div id="map-container" ></div>
+  </div>
+
+  <script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({
+    provider: {
+      // disableDefaultUI: true
+      // pass in other Google Maps API options here
+    },
+    internal: {
+      id: 'map-container'
+    }
+  },
+  function(){
+    var lat = <%= @vacant.latitude %>;
+    var lng = <%= @vacant.longitude %>;
+    markers = handler.addMarkers([
+      {
+        "lat": lat,
+        "lng": lng,
+        // "picture": {
+        //   "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+        //   "width":  32,
+        //   "height": 32
+        // },
+        "infowindow": "Hello!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(15);
+  }
+);
+</script>

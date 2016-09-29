@@ -1,0 +1,135 @@
+<% provide(:title, 'Home') %>
+<% provide(:class, 'full') %>
+
+<div class="text-center" style="background: transparent;">
+  <%= image_tag "whitelogo.png", style: "text-align: center; padding: 0px;",
+                                 class: "img-responsive center-block" %>
+</div>
+
+<br>
+<br>
+
+<!-- Begin pills/tabs -->
+<div class="row">
+
+  <div class="col-sm-6 centered-pills">
+    <h2 class="text-center" style="color: white;">
+      Search for Projects and Locations
+    </h2>
+    <br>
+    <ul class="nav nav-pills">
+      <li class="active">
+        <a data-toggle="pill" href="#home" style="color: white;">
+          <h4>Locations</h4>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="pill" href="#menu1" style="color: white;">
+          <h4>Projects</h4>
+        </a>
+      </li>
+    </ul>
+
+    <!-- <br> -->
+
+    <div class="tab-content text-center">
+      <div id="home" class="tab-pane fade in active">
+        <%= render 'vacants/advanced_search' %>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <%= render 'projects/advanced_search' %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6" >
+    <h2 class="text-center" style="color: white;">
+      Or Find Locations Near You
+    </h2>
+
+    <br>
+
+    <%= render 'gmaps' %>
+  </div>
+
+</div>
+<!-- End pills/tabs -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container container-gloss">
+<iframe src="http://wwydhbaltimore.wordpress.com" style="border:0px #FFFFFF none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="1500px" width="100%"></iframe>
+</div>
+<!-- Page Content -->
+<div class="container container-gloss">
+
+  <!-- Page Header -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Projects in Motion
+        <small>Projects</small>
+      </h1>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <!-- Projects Row -->
+  <div class="row">
+    <% @projects.each do |p| %>
+      <%= render 'project_card', item: p %>
+    <% end %>
+  </div>
+  <!-- /.row -->
+  
+  <br><br>
+
+</div>
+
+<br>
+
+<div class="container container-gloss">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Get Started
+        <small style="color: #428bca;">Links</small>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3 class="text-center">Projects</h3>
+      <ul id="links_from_home" class="text-center">
+        <li>
+          <%= link_to 'View all projects', projects_path %>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center">Users</h3>
+      <ul id="links_from_home" class="text-center">
+        <li>
+          <%= link_to 'Create an account', new_user_path %>
+        </li>
+        <li>
+          <%= link_to 'View all users', users_path %>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center">Locations</h3>
+      <ul id="links_from_home" class="text-center">
+        <li>
+          <%= link_to 'Submit a location', new_vacant_path %>
+        </li>
+        <li>
+          <%= link_to 'View all locations', vacants_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

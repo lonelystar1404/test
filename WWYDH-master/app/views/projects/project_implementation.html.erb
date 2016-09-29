@@ -1,0 +1,154 @@
+<% provide(:title, 'Project Implementation') %>
+<% provide(:class, 'full2') %>
+<h1 class = "listing-heading text-center" ><%= @project.title %> </h1>
+<div class = "container">
+  <!--All listing info goes here -->
+  <div class = "row" id = "listing">
+    <div class = "col-sm-5 text-center" id ="photos">
+      </br>
+      <img class = "img-responsive dropshadowclass" src = "http://cdn.baltimore.org/sites/default/master/files/carousel/city-crop.jpg" id = "listing-photo">
+      <div class = "text-center">
+        <button id = "camera-button" type = "button" class = "btn btn-default"><i class = "fa fa-camera"></i></button>
+      </div>
+      <div class="text-center center-block">
+        <br />
+        <h1 style="font-size:150%;"> Share this project! </h1>
+        <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+        <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+        <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+        <a href="mailto:wwydh@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+      </div>
+      <br />
+      <% if @project.users.any? %>
+        <div class="well">
+          <h3>Users in this project:</h3>
+          <ul class="text-center">
+            <% @project.users.each do |u| %>
+              <li class="text-center"><%= link_to u.username, user_path(u) %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class = "col-sm-7" id = "info">
+      <div class="account-wall col-lg-10 col-sm-12 col-sm-offset-1 col-md-offset-1">
+      <% if @project.project_leader %>
+        <div class="alert alert-info alert-dismissable" style="display: inline-block;">
+          <a class="panel-close close" data-dismiss="alert"></a>
+          <i class="fa fa-info-circle"></i>
+          <%= @project.project_leader.user.username %> is leading this project!
+        </div>
+        <br>
+        <% if current_user && @project.project_leader.user.id == current_user.id %>
+          <h4><strong>You're the leader</strong></h4>
+          <%= link_to 'This project is complete', { controller: 'projects', action: 'push_stage', id: @project.id }, class: 'btn btn-success' %>
+        <% end %>
+      <% else %>
+        <div class="alert alert-info alert-dismissable" style="display: inline-block;">
+          <a class="panel-close close" data-dismiss="alert"></a>
+          <i class="fa fa-info-circle"></i>
+          This project has no leader! &nbsp
+          <%= button_to 'Lead this project', { controller: "project_leaders", action: "create", project_id: @project.id, user_id: current_user.id } , method: :post, class: "btn btn-primary" %>
+        </div>
+      <% end %>
+      <div id = "progress">
+        <h3 class = "listing-heading tag-heading">Project Progress</h3>
+        <div class = "progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar"
+          aria-valuenow="40" aria-valuemin="0" aria-valuemax="6" style="width:75%">
+          Stage 3 (implementation)
+        </div>
+      </div>
+    </div>
+    <% if current_user && !current_user.projects.include?(@project) %>
+      <%= link_to 'Join this project', { controller: "users", action: "add_to_my_projects", id: @project.id }, class: "btn btn-primary" %>
+    <% end %>
+      <h3 class = "listing-heading">Info</h3>
+      <p class = "listing-detail">Location: <%= @vacant.full_address %></p>
+      <p class = "listing-detail">Owner: <%= @vacant.owner %> </p>
+      <p class = "listing-detail">Type: <%= @vacant.use %> </p>
+      <div class = "property-status">
+        <h3 class = "listing-heading">Concept Description</h3>
+        <p class = "listing-detail">Project Leader: John Doe</p>
+        <p class = "listing-detail"><%= @project.description %></p>
+        <p class = "listing-detail">Contact <a href="#">John Doe</a> to find out how you can help</p>
+      </div>
+  </div>
+  <div class = "col-md-7">
+    <br>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-success">Submit Progress Report</button>
+  </div>
+  </div>
+</div>
+<!--End of listing info -->
+<!--Beginning of comments section -->
+<br>
+<div class="row">
+  <div class="container">
+    <div class="col-md-8 col-md-10 pull-right">
+      <div class="well">
+        <h4>Project Discussion</h4>
+        <div class="input-group">
+          <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Write your message here..." />
+          <span class="input-group-btn" onclick="addComment()">
+            <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Comment</a>
+          </span>
+        </div>
+        <hr data-brackets-id="12673">
+        <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+          <strong class="pull-left primary-font">James</strong>
+          <small class="pull-right text-muted">
+            <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
+          </br>
+          <li class="ui-state-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
+        </br>
+        <strong class="pull-left primary-font">Taylor</strong>
+        <small class="pull-right text-muted">
+          <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+        </br>
+        <li class="ui-state-default">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-small">
+    <div class="panel panel-default">
+      <div class="panel-heading">Progess Reports</div>
+      <form>
+        <div class="form-group">
+          <div class="control"></div>
+        </div>
+        <div class="form-group">
+          <h4>Recent Activity</h4>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <td><i class="pull-right fa fa-edit"></i> Today, 1:00 - Jeff Manzi commented on your idea.</td>
+                </tr>
+                <tr>
+                  <td><i class="pull-right fa fa-edit"></i> Today, 12:23 - Your concept is officially a project!</td>
+                </tr>
+                <tr>
+                  <td><i class="pull-right fa fa-edit"></i> Today, 12:20 - You posted a new idea entry title "This vacant lot is perfect for a playground".</td>
+                </tr>
+                <tr>
+                  <td><i class="pull-right fa fa-edit"></i> Yesterday - Karen P. commented on your post.</td>
+                </tr>
+                <tr>
+                  <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Philip W. commented on your idea.</td>
+                </tr>
+                <tr>
+                  <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Jeff Manzi commented on your idea.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>

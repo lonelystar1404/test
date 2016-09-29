@@ -1,0 +1,66 @@
+
+  
+
+  <div id="map-canvas">
+    <div id="map-container"></div>
+    
+  </div>
+
+
+<script type="text/javascript">
+
+handler = Gmaps.build('Google');
+handler.buildMap({
+  provider: {
+    //disableDefaultUI: true
+    // pass in other Google Maps API options here
+  },
+  internal: {
+    id: 'map-container'
+  }
+},
+function(){
+  markers = handler.addMarkers([
+    {
+      "lat": 39.30941765,
+      "lng": -76.65104057,
+      "infowindow": "View this Project"
+    },
+    {
+      "lat": 39.30942276,
+      "lng": -76.65089166,
+      "infowindow": "View this Project"
+    },
+    {
+      "lat": 39.30942443,
+      "lng": -76.65084103,
+      "infowindow": "View this Project"
+    },
+    {
+      "lat": 39.30942603,
+      "lng": -76.65079304,
+      "infowindow": "View this Project"
+    },
+    {
+      "lat": 39.30943944,
+      "lng": -76.65044524,
+      "infowindow": "View this Project"
+    },
+    {
+      "lat": 39.30902061,
+      "lng": -76.65010741,
+      "infowindow": "View this Project"
+    },
+    {
+      "lat": 39.30894358,
+      "lng": -76.65010312,
+      "infowindow": "View this Project"
+    }
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+  handler.getMap().setZoom(19);
+}
+);
+
+</script>

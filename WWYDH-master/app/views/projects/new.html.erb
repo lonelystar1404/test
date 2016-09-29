@@ -1,0 +1,25 @@
+<% provide(:title, 'New Project') %>
+<% provide(:class, 'full2') %>
+<div class="row">
+    <div class="account-wall col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3
+                            col-md-4 col-md-offset-4">
+  
+  <h1 class="text-center">Create New Project</h1>
+  <hr>
+  <%= form_for @project do |f| %>
+    <%= render 'shared/error_messages', item: @project %>
+    <div class = "form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class = "form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+    <div class = "form-group">
+      <%= f.text_field :vacant_id, value: session[:vacant_id], class: "form-control", type: "hidden" %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-block btn-primary" %>
+  <% end %>
+  </div>
+</div>

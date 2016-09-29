@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-sm-4 col-sm-offset-4"> -->
+
+    <div class="col-sm-12">
+      <% if request.path.include?('projects') %>
+        <% @remote_flag = true %>
+        <h4 class="text-center">Advanced Search: Projects</h4>
+      <% end %>
+
+      <br>
+
+      <%= form_tag projects_path, method: "get", id: "search-form", remote: @remote_flag do %>
+        <%= text_field_tag :title, params[:title], class: "form-control", placeholder: "Name" %><br>
+        <%= number_field_tag :stage, params[:stage], class: "form-control", placeholder: "Stage" %><br>
+        <%= text_field_tag :description, params[:description], class: "form-control", placeholder: "Description" %><br>
+        <%= submit_tag "Search", class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>

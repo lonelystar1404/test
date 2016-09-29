@@ -1,0 +1,16 @@
+<% provide(:title, 'My Projects') %>
+<% provide(:class, 'full2') %>
+
+<h1>My Projects</h1>
+<br>
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    <% @user_projects.each do |p| %>
+      <div class="well col-sm-12">
+        <h3><%= link_to p.title, project_path(p) %></h3>
+        <h4>Stage: <%= p.stage %></h4>
+        <p><%= p.description %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

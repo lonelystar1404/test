@@ -1,0 +1,4 @@
+$('#results-wrap').hide()
+                  .empty()
+                  .html("<%= escape_javascript(render :partial => 'table_results') %>")
+                  .fadeIn("slow");

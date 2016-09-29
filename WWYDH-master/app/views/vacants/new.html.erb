@@ -1,0 +1,93 @@
+<% provide(:title, 'New Location') %>
+<% provide(:class, 'full') %>
+
+<div class="col-sm-8 col-sm-offset-2 account-wall">
+
+  <h1 class="text-center">Create New Location</h1>
+
+  <hr class="hr-half">
+
+  <br>
+
+  <%= form_for(@vacant, url: vacants_path) do |f| %>
+
+    <div class="col-sm-6">
+
+      <div class = "form-group">
+        <%= f.label :full_address %>
+        <%= f.text_field :full_address, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :block %>
+        <%= f.text_field :block, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :lot %>
+        <%= f.text_field :lot, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :zip_code %>
+        <%= f.text_field :zip_code, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :neighborhood %>
+        <%= f.text_field :neighborhood, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :police_district %>
+        <%= f.text_field :police_district, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6">
+
+      <div class = "form-group">
+        <%= f.label :council_district %>
+        <%= f.text_field :council_district, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :longitude %>
+        <%= f.text_field :longitude, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :latitude %>
+        <%= f.text_field :latitude, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :owner %>
+        <%= f.text_field :owner, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :use %>
+        <%= f.text_field :use, class: "form-control" %>
+      </div>
+
+      <div class = "form-group">
+        <%= f.label :mailing_address %>
+        <%= f.text_field :mailing_address, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6 col-sm-offset-3" style="padding-bottom: 20px;">
+      <br>
+      <%= f.submit "Submit", class: "btn btn-block btn-primary" %>
+    </div>
+  <% end %>
+
+</div>

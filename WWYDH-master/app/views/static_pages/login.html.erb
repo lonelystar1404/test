@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FAVICON <link rel="icon" href="http://getbootstrap.com/favicon.ico">-->
+    <title>Sign In</title>
+  <body>
+	  <div class="container">
+		<div class = "row">
+		<div class = "col-sm-4 col-sm-offset-4">
+		  <form class="form-signin" action = "#" method="POST" id="loginF">
+			<h2 class="form-signin-heading">Please sign in</h2>
+			<!-- EMAIL -->
+			<div id="email-group" class="form-group">
+				<label for="inputEmail"></label>
+				<input type="email" class="form-control" id = "inputEmail" name="Email" placeholder="Email">
+				<!-- errors will go here -->
+			</div>
+			<!-- Password -->
+			<div id="password-group" class="form-group">
+				<label for="inputPassword" class = "sr-only">Password</label>
+				<input type="password" class="form-control" id = "inputPassword" name="Password" placeholder="Password">
+				<!-- errors will go here -->
+			</div>
+			<div class="checkbox">
+			  <label>
+				<input type="checkbox" value="remember-me">Remember me
+			  </label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<a href="#" class = "btn btn-lg btn-danger btn-block">Forgot Password?</a>
+			<a href="register.html" class = "btn btn-lg btn-info btn-block">Register</a>
+			<a href="index.html" class = "btn btn-lg btn-block btn-success">Return Home</a>
+		  </form>
+		</div>
+		<div class = "col-sm-4"></div>
+		</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<% provide(:title, 'Contact Us') %>
+<% provide(:class, 'full') %>
+
+<div class="row">
+	<div class="account-wall col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3
+							col-md-4 col-md-offset-4">
+
+		<div class="form-signin">
+			<h1>Contact Us</h1>
+		  <hr>
+		  <%= form_for @ticket do |f| %>
+				<%= render 'shared/error_messages', item: @ticket %>
+
+		    <div class = "form-group">
+		      <%= f.text_field :name, class: "form-control", placeholder: "First & Last Name" %>
+		    </div>
+		    <div class = "form-group">
+		      <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+		    </div>
+		    <div class = "form-group">
+		      <%= f.text_area :message, class: "form-control", placeholder: "Your message here", rows: "5" %>
+		    </div>
+		    <%= f.submit "Submit", class: "btn btn-block btn-primary" %>
+				<br>
+		  <% end %>
+		</div>
+	</div>
+</div>

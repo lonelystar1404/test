@@ -1,0 +1,11 @@
+<div class="col-md-6 portfolio-item">
+  <a href="#">
+    <%= image_tag("https://maps.googleapis.com/maps/api/streetview?size=555x317&location=#{item.vacant.latitude},#{item.vacant.longitude}&fov=90") %>
+  </a>
+  <h3>
+    <%= link_to "#{item.title}", project_path(item) %>
+    &nbsp
+    <span><small>Stage: <%= item.stage %></small></span>
+  </h3>
+  <p>Description: <%= item.description %></p>
+</div>

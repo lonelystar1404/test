@@ -1,0 +1,56 @@
+<% provide(:class, 'full2') %>
+<% provide(:title, @vacant.full_address) %>
+    <div class="container">
+        <h1 class="address"><%= @vacant.full_address %></h1>
+    </div>
+
+    <div class="container">
+        <div class="account-wall col-lg-10 col-xs-offset-1 col-sm-6 col-sm-offset-1
+                            col-md-4 col-md-offset-1">
+
+        <span class="pic">
+            <%= image_tag("https://maps.googleapis.com/maps/api/streetview?size=400x400&location=#{@vacant.latitude},#{@vacant.longitude}&fov=90", :class => "style_image") %>
+        </span>
+
+        <span class="infoContainer">
+            <h3 class = "listing-detail"><%= @vacant.city %> <%= @vacant.zip_code%></h3>
+            <p class = "listing-detail">Neighborhood: <%= @vacant.neighborhood %></p>
+            <p class = "listing-detail">Police District: <%= @vacant.police_district%></p>
+            <p class = "listing-detail">Council District: <%= @vacant.council_district %></p>
+            <p class = "listing-detail">Owner: <%= @vacant.owner %></p>
+            <p class = "listing-detail">Use: <%= @vacant.use %></p>
+            <p class = "listing-detail">Mail: <%= @vacant.mailing_address %></p>
+						<%= link_to "Create a project here!", new_project_path(:vacant => @vacant.id), class: "btn btn-primary" %>
+						<br><br>
+            <p class = "listing-detail"><%= link_to 'Return to vacants list', vacants_path %></p>
+        </span>
+        </div>
+    </div>
+
+    <div id="vacant-show-map-container">
+            <%= render 'gmaps' %>
+    </div>
+
+    <div class="container">
+
+
+    <h1 class = "listing-heading text-center">Projects at this location</h1>
+
+    <div class="container">
+        <div class="account-wall col-lg-10 col-xs-offset-1 col-sm-6 col-sm-offset-1
+                            col-md-4 col-md-offset-1">
+
+            <% unless @projects.present? %>
+                <div>There are no projects at this location yet!</div>
+            <% else %>
+								<% @projects.each do |p| %>
+						      <div class="well col-sm-12">
+						        <h3><%= link_to p.title, project_path(p) %></h3>
+						        <h4>Stage: <%= p.stage %></h4>
+						        <p><%= p.description %></p>
+						      </div>
+						    <% end %>
+            <% end %>
+        </div>
+
+    </div>

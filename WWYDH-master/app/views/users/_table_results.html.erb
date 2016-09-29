@@ -1,0 +1,27 @@
+<div class = "table-responsive" >
+<table class="table table-hover">
+  <h4 class="text-center">
+    <%= page_entries_info @users, model: 'user' %>
+  </h4>
+  <br>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <th scope="row"><%= user.id %></th>
+        <td><%= link_to user.username, user_path(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div class="text-center">
+  <%= js_will_paginate @users, previous_label: "&larr; Prev",
+  next_label: "Next &rarr;", style: "display: inline-block;",
+  inner_window: 1, outer_window: 0 %>
+</div>

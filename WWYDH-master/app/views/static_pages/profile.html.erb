@@ -1,0 +1,237 @@
+<!--- <html class= "full" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="What, Would, You, Do, Here" />
+  The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>WWYDH</title>
+  <% provide(:title, 'Profile') %>
+
+  <!-- Bootstrap
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/profile.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+<!--
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-10">
+        <div class="well panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 text-center">
+                <img src="http://static.happy-tripping.com/images/travel1.png" alt="" class="center-block img-circle img-thumbnail img-responsive">
+                <ul class="list-inline ratings text-center" title="Ratings">
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                </ul>
+              </div>
+              /col
+              <div class="col-xs-12 col-sm-8">
+                <h2><%= @user.firstname @user.lastname %></h2>
+                <p><strong>Location: </strong> Towson, MD </p>
+                <p><strong>Contact email: </strong> test@testemail.com</p>
+                <p><strong>Currently interested in: </strong> Opening up a restaurant </p>
+                <p><strong>Skills: </strong>
+
+                  <span class="label label-info tags">Java</span>
+                  <span class="label label-danger tags">Carpenter</span>
+                  <span class="label label-success tags">Lawyer</span>
+                </p>
+              </div>
+
+              <div class="clearfix"></div>
+              <div class="col-xs-12 col-sm-4">
+                <h2><strong> 20 </strong></h2>
+                <p><small>Contributions</small></p>
+                <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Rate user </button>
+              </div>
+
+              <div class="col-xs-12 col-sm-4">
+                <h2><strong>245</strong></h2>
+                <p><small>Comments</small></p>
+                <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View comments </button>
+              </div>
+
+              <div class="col-xs-12 col-sm-4">
+                <h2><strong>43</strong></h2>
+                <p><small>Ideas</small></p>
+                <a href="report.html" class="btn btn-danger btn-block"><i class="fa fa-exclamation-circle"></i role="button"> Report this user</a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <hr>
+  <div class="well panel panel-default">
+    <div class="panel-body">
+  <div class="container">
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-sm-9">
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <h1>About me</h1>
+                    <tr>
+                    </thead>
+                    <tbody id="items">
+                      <tr>
+                        <hr>
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <p>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                              <ul class="pagination" id="myPager"></ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr>
+
+                        <h4>Recent Activity</h4>
+
+                        <div class="table-responsive">
+                          <table class="table table-hover">
+
+                            <tbody>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Today, 1:00 - Jeff Manzi commented on your idea.</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Today, 12:23 - Your concept is officially a project!</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Today, 12:20 - You posted a new idea entry title "This vacant lot is perfect for a playground".</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Yesterday - Karen P. commented on your post.</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Philip W. commented on your idea.</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Jeff Manzi commented on your idea.</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                      </div>/tab-pane
+                      <div class="tab-pane" id="messages">
+                        <h2></h2>
+                      </div>/tab-pane
+                      <div class="tab-pane" id="settings">
+
+                        <hr>
+                        <form class="form" action="##" method="post" id="registrationForm">
+                          <div class="form-group">
+
+                            <div class="col-xs-6">
+                              <label for="first_name"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                            </div>
+                          </div>
+                          <div class="form-group">
+
+                            <div class="col-xs-6">
+                              <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+
+                            <div class="col-xs-6">
+                              <label for="phone"><h4>Phone</h4></label>
+                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-xs-6">
+                              <label for="mobile"><h4>Mobile</h4></label>
+                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                            </div>
+                          </div>
+                          <div class="form-group">
+
+                            <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                            </div>
+                          </div>
+                          <div class="form-group">
+
+                            <div class="col-xs-6">
+                              <label for="email"><h4>Location</h4></label>
+                              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                            </div>
+                          </div>
+                          <div class="form-group">
+
+                            <div class="col-xs-6">
+                              <label for="password"><h4>Password</h4></label>
+                              <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                            </div>
+                          </div>
+                          <div class="form-group">
+
+                            <div class="col-xs-6">
+                              <label for="password2"><h4>Verify</h4></label>
+                              <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-xs-12">
+                              <br>
+                              <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                              <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+-->
+
+ <h1>Profile</h1>
+<!--<p>
+  Name: <%= "#{current_user.firstname} #{current_user.lastname}" %>
+  <br>
+  Email: <%= current_user.email %>
+</p>-->

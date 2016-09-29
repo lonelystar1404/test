@@ -1,0 +1,138 @@
+<% provide(:title, "#{@user.username}\'s Profile") %>
+<% provide(:class, 'full2') %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-10">
+        <div class="well panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 text-center">
+                <img src="http://static.happy-tripping.com/images/travel1.png" alt="" class="center-block img-circle img-thumbnail img-responsive">
+              </br>
+                <ul class="list-inline ratings text-center" title="Ratings">
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                </ul>
+              </div>
+              <!--/col-->
+              <div class="col-xs-12 col-sm-8">
+                <h2><%= @user.username %></h2>
+                <% if @user.firstname && @user.lastname %>
+                  <h3><%= "#{@user.firstname.capitalize} #{@user.lastname.capitalize}" %></h3>
+                <% end %>
+                <p><strong>Location: </strong> Towson, MD </p>
+                <!-- <p><strong>Contact email: </strong><%= @user.email %></p> -->
+                <p><strong>Currently interested in: </strong> Opening up a restaurant </p>
+                <p><strong>Skills: </strong>
+
+                  <span class="label label-info tags">Java</span>
+                  <span class="label label-danger tags">Carpenter</span>
+                  <span class="label label-success tags">Lawyer</span>
+                </p>
+              </div>
+              <!--/col-->
+              <div class="clearfix"></div>
+              <div class="col-xs-12 col-sm-4">
+                <h2><strong> 20 </strong></h2>
+                <p><small>Contributions</small></p>
+                <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Rate user </button>
+              </div>
+              <!--/col-->
+              <div class="col-xs-12 col-sm-4">
+                <h2><strong>245</strong></h2>
+                <p><small>Comments</small></p>
+                <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View comments </button>
+              </div>
+              <!--/col-->
+              <div class="col-xs-12 col-sm-4">
+                <h2><strong>43</strong></h2>
+                <p><small>Ideas</small></p>
+                <!-- <a href="report.html" class="btn btn-danger btn-block"><i class="fa fa-exclamation-circle"></i role="button"> Report this user</a> -->
+                <a href="#" class="btn btn-danger btn-block"><i class="fa fa-exclamation-circle"></i role="button"> Report this user</a>
+              </div>
+              <!--/col-->
+            </div>
+            <!--/row-->
+          </div>
+          <!--/panel-body-->
+        </div>
+        <!--/panel-->
+      </div>
+      <!--/col-->
+    </div>
+    <!--/row-->
+  </div>
+  <!--/container-->
+
+
+  <hr>
+  <div class="well panel panel-default">
+    <div class="panel-body">
+  <div class="container">
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="col-md-1"><!--left col-->
+
+      </div><!--/col-3-->
+      <div class="col-sm-10">
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <h1>About Me</h1>
+                    <tr>
+                    </thead>
+                    <tbody id="items">
+                      <tr>
+                        <hr>
+                        <div class="row">
+                          <div class="col-sm-10">
+                            <p>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                          </div>
+                        </div><!--/table-resp-->
+
+                        <hr>
+
+                        <h4>Recent Activity</h4>
+
+                        <div class="table-responsive">
+                          <table class="table table-hover">
+
+                            <tbody>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Today, 1:00 - Jeff Manzi commented on your idea.</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Today, 12:23 - Your concept is officially a project!</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Today, 12:20 - You posted a new idea entry title "This vacant lot is perfect for a playground".</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> Yesterday - Karen P. commented on your post.</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Philip W. commented on your idea.</td>
+                              </tr>
+                              <tr>
+                                <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Jeff Manzi commented on your idea.</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>

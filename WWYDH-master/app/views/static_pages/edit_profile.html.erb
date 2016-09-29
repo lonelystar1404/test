@@ -1,0 +1,339 @@
+<% provide(:title, 'Edit Profile') %>
+<% provide(:class, 'full2') %>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="What, Would, You, Do, Here" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Edit Profile</title>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <div class="container">
+    <h1>Edit Profile</h1>
+    <hr>
+    <div class="row">
+
+
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="http://static.happy-tripping.com/images/travel1.png" class="avatar img-circle" alt="avatar">
+          <h6><i class="fa fa-file-image-o"></i> Upload a different photo</h6>
+
+          <input type="file" class="form-control">
+        </div>
+      </div>
+
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert"></a>
+          <i class="fa fa-info-circle"></i>
+          You can change your profile information below.
+        </div>
+        <h3>Personal info</h3>
+
+        <form class="form-horizontal" role="form">
+          
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Company:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Currently interested in:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Skills: </label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Neighborhood: </label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="user_time_zone" class="form-control">
+                  <option value="Other (unlisted location)"> Other (unlisted neighborhood)</option>
+                  <option value="Abell"> Abell</option>
+                  <option value="Allendale"> Allendale</option>
+                  <option value="Arcadia"> Arcadia</option>
+                  <option value="Arlington"> Arlington</option>
+                  <option value="Armistead Gardens"> Armistead Gardens</option>
+                  <option value="Ashburton"> Ashburton</option>
+                  <option value="Baltimore Highlands"> Baltimore Highlands</option>
+                  <option value="Barclay"> Barclay</option>
+                  <option value="Bayview"> Bayview</option>
+                  <option value="Beechfield"> Beechfield</option>
+                  <option value="Belair-Edison"> Belair-Edison</option>
+                  <option value="Belair-Parkside"> Belair-Parkside</option>
+                  <option value="Bellona-Gittings"> Bellona-Gittings</option>
+                  <option value="Belvedere"> Belvedere</option>
+                  <option value="Berea"> Berea</option>
+                  <option value="Better Waverly"> Better Waverly</option>
+                  <option value="Beverly Hills"> Beverly Hills</option>
+                  <option value="Biddle Street"> Biddle Street</option>
+                  <option value="Blythewood"> Blythewood</option>
+                  <option value="Bolton Hill"> Bolton Hill</option>
+                  <option value="Boyd-Booth"> Boyd-Booth</option>
+                  <option value="Brewers Hill"> Brewers Hill</option>
+                  <option value="Bridgeview/Greenlawn"> Bridgeview/Greenlawn</option>
+                  <option value="Broadway East"> Broadway East</option>
+                  <option value="Broening Manor"> Broening Manor</option>
+                  <option value="Brooklyn"> Brooklyn</option>
+                  <option value="Burleith-Leighton"> Burleith-Leighton</option>
+                  <option value="Butcher's Hill"> Butcher's Hill</option>
+                  <option value="Callaway-Garrison"> Callaway-Garrison</option>
+                  <option value="Canton"> Canton</option>
+                  <option value="Caroll-South Hilton"> Carroll-South Hilton</option>
+                  <option value="Carrollton Ridge"> Carrollton Ridge</option>
+                  <option value="Cedarcroft"> Cedarcroft</option>
+                  <option value="Cedmont"> Cedmont</option>
+                  <option value="Cedonia"> Cedonia</option>
+                  <option value="Central Forest Park"> Central Forest Park</option>
+                  <option value="Central Park Heights"> Centrak Park Heights</option>
+                  <option value="Charles North"> Charles North</option>
+                  <option value="Charles Village"> Charles Village</option>
+                  <option value="Cherry Hill"> Cherry Hill</option>
+                  <option value="Cheswolde"> Cheswolde</option>
+                  <option value="Chinquapin Park"> Chinquapin Park</option>
+                  <option value="Christopher"> Christopher</option>
+                  <option value="Coldspring"> Coldspring</option>
+                  <option value="Coldstream Homestead Montebello"> Coldstream Homestead Montebello</option>
+                  <option value="Coppin Heights/Ash-Co-East"> Coppin Heights/Ash-Co-East</option>
+                  <option value="Cross Country"> Cross Country</option>
+                  <option value="Cross Keys"> Cross Keys</option>
+                  <option value="Curtis Bay"> Curtis Bay</option>
+                  <option value="Cylburn"> Cylburn</option>
+                  <option value="Darley Park"> Darley Park</option>
+                  <option value="Dickeyville"> Dickeyville</option>
+                  <option value="Dolfield"> Dolfield</option>
+                  <option value="Dorchester"> Dorchester</option>
+                  <option value="Downtown"> Downtown</option>
+                  <option value="Downtown West"> Downtown West</option>
+                  <option value="Druid Heights"> Druid Heights</option>
+                  <option value="Dunbar-Broadway"> Dunbar-Broadway</option>
+                  <option value="East Arlington"> East Arlington</option>
+                  <option value="East Baltimore Midway"> East Baltimore Midway</option>
+                  <option value="Easterwood"> Easterwood</option>
+                  <option value="Eastwood"> Eastwood</option>
+                  <option value="Edgewood"> Edgewood</option>
+                  <option value="Edmonson Village"> Edmonson Village</option>
+                  <option value="Ednor Gardens-Lakeside"> Ednor Gardens-Lakeside</option>
+                  <option value="Ellwood Park/Monument"> Ellwood Park/Monument</option>
+                  <option value="Evergreen"> Evergreen</option>
+                  <option value="Evergreen Lawn"> Evergreen Lawn</option>
+                  <option value="Evesham Park"> Evesham Park</option>
+                  <option value="Fairmont"> Fairmont</option>
+                  <option value="Fallstaff"> Fallstaff</option>
+                  <option value="Federal Hill"> Federal Hill</option>
+                  <option value="Fells Point"> Fells Point</option>
+                  <option value="Forest Park"> Forest Park</option>
+                  <option value="Frankford"> Frankford</option>
+                  <option value="Franklin Square"> Franklin Square</option>
+                  <option value="Franklintown"> Franklintown</option>
+                  <option value="Garwyn Oaks"> Garwyn Oaks</option>
+                  <option value="Gay Street"> Gay Street</option>
+                  <option value="Glen"> Glen</option>
+                  <option value="Glen Oaks"> Glen Oaks</option>
+                  <option value="Glenham-Belhar"> Glenham-Belhar</option>
+                  <option value="Graceland Park"> Graceland Park</option>
+                  <option value="Greektown"> Greektown</option>
+                  <option value="Greenmount West"> Greenmount West</option>
+                  <option value="Greenspring"> Greenspring</option>
+                  <option value="Guilford"> Guilford</option>
+                  <option value="Gwynns Falls"> Gwynns Falls</option>
+                  <option value="Hamilton Hills"> Hamilton Hills</option>
+                  <option value="Hampden"> Hampden</option>
+                  <option value="Hanlon-Longwood"> Hanlon-Longwood</option>
+                  <option value="Harlem Park"> Harlem Park</option>
+                  <option value="Harwood"> Harwood</option>
+                  <option value="Heritage Crossing"> Heritage Crossing</option>
+                  <option value="Highlandtown"> Highlandtown</option>
+                  <option value="Hillen"> Hillen</option>
+                  <option value="Hoes Heights"> Hoes Heights</option>
+                  <option value="Hollins Market"> Hollins Market</option>
+                  <option value="Homeland"> Homeland</option>
+                  <option value="Howard Park"> Howard Park</option>
+                  <option value="Hunting Ridge"> Hunting Ridge</option>
+                  <option value="Idlewood"> Idlewood</option>
+                  <option value="Inner Harbor"> Inner Harbor</option>
+                  <option value="Irvington"> Irvington</option>
+                  <option value="Johnston Square"> Johnston Square</option>
+                  <option value="Jonestown"> Jonestown</option>
+                  <option value="Kenilworth Park"> Kenilworth Park</option>
+                  <option value="Kernewood"> Kernewood</option>
+                  <option value="Keswick"> Keswick</option>
+                  <option value="Kresson"> Kresson</option>
+                  <option value="Lake Evesham"> Lake Evesham</option>
+                  <option value="Lake Walker"> Lake Walker</option>
+                  <option value="Lakeland"> Lakeland</option>
+                  <option value="Langston Hughes"> Langston Hughes</option>
+                  <option value="Lauraville"> Lauraville</option>
+                  <option value="Levindale"> Levindale</option>
+                  <option value="Liberty Square"> Liberty Square</option>
+                  <option value="Little Italy"> Little Italy</option>
+                  <option value="Loch Raven"> Loch Raven</option>
+                  <option value="Locust Point"> Locust Point</option>
+                  <option value="Lower Edmonson Village"> Lower Edmonson Village</option>
+                  <option value="Lucille Park"> Lucille Park</option>
+                  <option value="Madison Park"> Madison Park</option>
+                  <option value="Madison-Eastend"> Madison-Eastend</option>
+                  <option value="Mayfield"> Mayfield</option>
+                  <option value="McElderry Park"> McElderry Park</option>
+                  <option value="Medfield"> Medfield</option>
+                  <option value="Medford"> Medford</option>
+                  <option value="Mid-Govans"> Mid-Govans</option>
+                  <option value="Mid-Town Belvedere"> Mid-Town Belvedere</option>
+                  <option value="Middle East"> Middle East</option>
+                  <option value="Midtown-Edmonson"> Midtown-Edmonson</option>
+                  <option value="Millhill"> Millhill</option>
+                  <option value="Milton-Montford"> Milton-Montford</option>
+                  <option value="Mondawmin"> Mondawmin</option>
+                  <option value="Moravia-Walther"> Moravia-Walther</option>
+                  <option value="Morgan Park"> Morgan Park</option>
+                  <option value="Morrell Park"> Morrell Park</option>
+                  <option value="Mosher"> Mosher</option>
+                  <option value="Mount Holly"> Mount Holly</option>
+                  <option value="Mount Vernon"> Mount Vernon</option>
+                  <option value="Mount Washington"> Mount Washington</option>
+                  <option value="Mount Winans"> Mount Winans</option>
+                  <option value="New Northwood"> New Northwood</option>
+                  <option value="New Southwest/Mount Clare"> New Southwest/Mount Clare</option>
+                  <option value="North Harford Road"> North Harford Road</option>
+                  <option value="North Rolan Park/Poplar Hill"> North Rolan Park/Poplar Hill</option>
+                  <option value="Northwest Community Action"> Northwest Community Action</option>
+                  <option value="O'Donnell Heights"> O'Donnell Heights</option>
+                  <option value="Oakenshawe"> Oakenshawe</option>
+                  <option value="Oaklee"> Oaklee</option>
+                  <option value="Old Goucher"> Old Goucher</option>
+                  <option value="Oldtown"> Oldtown</option>
+                  <option value="Oliver"> Oliver</option>
+                  <option value="Orangeville"> Orangeville</option>
+                  <option value="Orchard Ridge"> Orchard Ridge</option>
+                  <option value="Otterbein"> Otterbein</option>
+                  <option value="Overlea"> Overlea</option>
+                  <option value="Park Circle"> Park Circle</option>
+                  <option value="Parklane"> Parklane</option>
+                  <option value="Parkside"> Parkside</option>
+                  <option value="Parkview/Woodbrock"> Parkview/Woodbrock</option>
+                  <option value="Patterson Park"> Patterson Park</option>
+                  <option value="Patterson Place"> Patterson Place</option>
+                  <option value="Pen Lucy"> Pen Lucy</option>
+                  <option value="Penn North"> Penn North</option>
+                  <option value="Penn-Fallsway"> Penn-Fallsway</option>
+                  <option value="Penrose/Fayette Street"> Penrose/Fayette Street</option>
+                  <option value="Perring Loch"> Perring Loch</option>
+                  <option value="Poppleton"> Poppleton</option>
+                  <option value="Purnell"> Purnell</option>
+                  <option value="Radnor-Winston"> Radnor-Winston</option>
+                  <option value="Ramblewood"> Ramblewood</option>
+                  <option value="Reisterstown Station"> Reistertown Station</option>
+                  <option value="Remington"> Remington</option>
+                  <option value="Resevoir Hill"> Resevoir Hill</option>
+                  <option value="Richnor Springs"> Richnor Springs</option>
+                  <option value="Ridgely's Delight"> Ridgely's Delight</option>
+                  <option value="Riverside"> Riverside</option>
+                  <option value="Rognel Heights"> Rognel Heights</option>
+                  <option value="Roland Park"> Roland Park</option>
+                  <option value="Rosebank"> Rosebank</option>
+                  <option value="Rosemont"> Rosemont</option>
+                  <option value="Rosemont East"> Rosemont East</option>
+                  <option value="Saint Agnes"> Saint Agnes</option>
+                  <option value="Saint Helena"> Saint Helena</option>
+                  <option value="Saint Josephs"> Saint Josephs</option>
+                  <option value="Saint Paul"> Saint Paul</option>
+                  <option value="Sandtown-Winchester"> Sandtown-Winchester</option>
+                  <option value="Seton Hill"> Seton Hill</option>
+                  <option value="Sharp-Leadenhall"> Sharp-Leadenhall</option>
+                  <option value="Shipley Hill"> Shipley Hill</option>
+                  <option value="South Baltimore"> South Baltimore</option>
+                  <option value="South Clifton Park"> South Clifton Park</option>
+                  <option value="Taylor Heights"> Taylor Heights</option>
+                  <option value="Ten Hills"> Ten Hills</option>
+                  <option value="The Orchard"> The Orchards</option>
+                  <option value="Tremont"> Tremont</option>
+                  <option value="Union Square"> Union Square</option>
+                  <option value="Uplands"> Uplands</option>
+                  <option value="Upper Fells Point"> Upper Fells Point</option>
+                  <option value="Upton"> Upton</option>
+                  <option value="Violetville"> Violetville</option>
+                  <option value="Wakefield"> Wakefield</option>
+                  <option value="Walbrook"> Walbrook</option>
+                  <option value="Waltherson"> Waltherson</option>
+                  <option value="Washington Hill"> Washington Hill</option>
+                  <option value="Washington Village/Pigtown"> Washington Village/Pigtown</option>
+                  <option value="Waverly"> Waverly</option>
+                  <option value="West Arlington"> West Arlington</option>
+                  <option value="West Forest Park"> West Forest Park</option>
+                  <option value="West Hills"> West Hills</option>
+                  <option value="Westfield"> Westfield</option>
+                  <option value="Westgate"> Westgate</option>
+                  <option value="Westport"> Westport</option>
+                  <option value="Wilhelm Park"> Wilhelm Park</option>
+                  <option value="Wilson Park"> Wilson Park</option>
+                  <option value="Winchester"> Winchester</option>
+                  <option value="Windsor Hills"> Windsor Hills</option>
+                  <option value="Woodberry"> Woodberry</option>
+                  <option value="Woodbourne Heights"> Woodbourne Heights</option>
+                  <option value="Woodmere"> Woodmere</option>
+                  <option value="Wrenlane"> Wrenlane</option>
+                  <option value="Wyman Park"> Wyman Park</option>
+                  <option value="Wyndhurst"> Wyndhurst</option>
+                  <option value="Yale Heights"> Yale Heights</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Username:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Password:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="password" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Confirm password:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="password" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              
+              <input type="button" class="btn btn-primary" value="Save Changes">
+              
+              
+              
+              <%= link_to "Cancel",  {:controller => "users", :action => "show"},  class: "btn btn-default", style: "width: 100%" %>
+              
+            </div >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <hr>

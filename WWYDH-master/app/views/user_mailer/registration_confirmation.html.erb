@@ -1,0 +1,4 @@
+Hi <%= @user.firstname %>
+
+Thanks for joining What Would You Do Here! Please confirm your registration by clicking on the link below:
+<%= confirm_email_user_url(@user.confirm_token) %>
